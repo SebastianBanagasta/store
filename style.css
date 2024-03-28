@@ -2,6 +2,14 @@
     margin: 0;
 }
 
+.container {
+    width: 1220px;
+    margin: 0 auto;
+    border: 1px solid springgreen;
+    height: inherit;
+    min-height: inherit;
+}
+
 section {
     border: 1px solid purple;
     height: 340px;
