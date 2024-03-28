@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+}
+
+footer {
+    border: 1px solid #009145;/* Hexadecimal color code*/
+    min-height: 368px;
+}
