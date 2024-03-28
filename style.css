@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+}
+
+section {
+    border: 1px solid purple;
+    height: 340px;
+}
