@@ -2,14 +2,6 @@
     margin: 0;
 }
 
-.container {
-    width: 1220px;
-    margin: 0 auto;
-    border: 1px solid springgreen;
-    height: inherit;
-    min-height: inherit;
-}
-
 footer {
     border: 1px solid #009145;
     /* Hexadecimal color code*/
