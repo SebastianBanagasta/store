@@ -2,12 +2,22 @@
     margin: 0;
 }
 
+body,
+html {
+    font-family: "Inter", sans-serif;
+}
+
 .container {
     width: 1220px;
     margin: 0 auto;
     border: 1px solid springgreen;
     height: inherit;
     min-height: inherit;
+}
+
+header {
+    border: 1px solid red;
+    height: 152px;
 }
 
 section {
