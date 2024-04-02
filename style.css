@@ -14,3 +14,8 @@ html {
     height: inherit;
     min-height: inherit;
 }
+
+header {
+    border: 1px solid red;
+    height: 152px;
+}
