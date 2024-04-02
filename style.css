@@ -13,6 +13,9 @@ html {
     border: 1px solid springgreen;
     height: inherit;
     min-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 header {
@@ -23,6 +26,23 @@ header {
 section {
     border: 1px solid purple;
     height: 340px;
+}
+section#hero{
+    background: url('/assets/hero_bg.png');
+    background-size: cover;
+    background-position: top center;
+}
+.title-container span {
+    display: block;
+    color: #f0f0f0;
+    font-weight: 700;
+}
+.title-container span:first-child {
+    font-size: 3rem;
+}
+.title-container span:last-child {
+    font-size: 5rem;
+    line-height: 100px;
 }
 
 main {
