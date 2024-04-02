@@ -15,20 +15,6 @@ html {
     min-height: inherit;
 }
 
-
-footer {
-    border: 1px solid #009145;
-    /* Hexadecimal color code*/
-    min-height: 368px;
-}
-
-.product-img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    object-position: center;
-}
-
 header {
     border: 1px solid red;
     height: 152px;
@@ -42,4 +28,25 @@ section {
 main {
     border: 1px solid blue;
     height: auto;
+}
+
+.product-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-price-block {
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+footer {
+    border: 1px solid #009145;
+    /* Hexadecimal color code*/
+    min-height: 368px;
 }
