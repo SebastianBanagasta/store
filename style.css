@@ -19,3 +19,8 @@ header {
     border: 1px solid red;
     height: 152px;
 }
+
+section {
+    border: 1px solid purple;
+    height: 340px;
+}
