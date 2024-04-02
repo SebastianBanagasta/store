@@ -13,9 +13,6 @@ html {
     border: 1px solid springgreen;
     height: inherit;
     min-height: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
 header {
@@ -31,6 +28,11 @@ section#hero{
     background: url('/assets/hero_bg.png');
     background-size: cover;
     background-position: top center;
+}
+section#hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 .title-container span {
     display: block;
