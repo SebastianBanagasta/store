@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+}
+
+body,
+html {
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 1220px;
+    margin: 0 auto;
+    height: inherit;
+    min-height: inherit;
+}
+
+/* ********************************* */
+/* ESTE ES EL HEADER Y LA NAVEGACION */
+/* ********************************* */
+header {
+    border: 1px solid red;
+    height: 152px;
+    background-color: #ff3b3c;
+    /* Ejemplo de color */
+}
+
+.search {
+    margin-top: 25px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.search .form {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.search .form input {
+    height: 62px;
+    border-radius: 14px;
+    border: none;
+    width: 505px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.search .social ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search .social ul li {
+    padding: 0 10px;
+}
+
+.nav {
+    padding: 10px 0;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li a {
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 50px;
+    height: auto;
+}
+
+main .columns-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-images-block,
+.product-description-block,
+.product-checkout-block {
+    margin: 0px 10px;
+    flex: 1;
+}
+
+.product-description-block .title {
+    color: #333;
+    /* Elige un color adecuado */
+    font-size: 24px;
+    /* Ajusta el tamaño según sea necesario */
+    font-weight: bold;
+    margin-top: 0;
+    word-wrap: break-word;
+}
+
+.product-description-block .selector fieldset {
+    border: 2px #919191 solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.product-description-block .selector fieldset select {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.product-images-block {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.product-description-block .description p {
+    color: #646464;
+    font-size: 16px;
+    font-weight: lighter;
+    word-wrap: break-word;
+}
+
+.product-images-block {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.product-images-block .thumbnail-container {
+    grid-column: 1;
+    margin: 3px;
+
+    max-width: 100%;
+    overflow: hidden;
+    margin: 5px;
+    /* border: 1px solid #ccc; */
+}
+
+.product-images-block .thumbnail-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.product-images-block .main-image {
+    width: 100%;
+    grid-row: 1 / 5;
+    grid-column: 2 / 5;
+}
+
+
+.checkout-container {
+    background-color: #ebebeb;
+    /* Color de fondo claro */
+    padding: 33px;
+    /* Espaciado interno */
+    border-radius: 2px;
+    /* Bordes ligeramente redondeados */
+}
+
+.checkout-total-label {
+    color: #ff3b3c;
+    /* Color distintivo para el texto 'Total:' */
+}
+
+.checkout-total-price {
+    font-size: 28px;
+    /* Tamaño grande para el precio */
+    font-weight: 700;
+    /* Fuente en negrita */
+    margin-top: 10px;
+    /* Espacio por encima del precio */
+}
+
+.checkout-description {
+    line-height: 20.4px;
+    /* Espaciado de línea para mejorar la legibilidad */
+    word-wrap: break-word;
+    /* Asegura que el texto no desborde el contenedor */
+}
+
+.checkout-policy-list {
+    list-style-type: none;
+    /* Elimina los marcadores de lista */
+    margin-bottom: 30px;
+    /* Espacio debajo de la lista */
+}
+
+.checkout-policy-list li {
+    display: flex;
+    /* Alineación horizontal de íconos y texto */
+    margin: 15px 0;
+    /* Espacio entre elementos de la lista */
+}
+
+.checkout-policy-list li .policy-icon {
+    margin-right: 15px;
+    /* Espacio entre el ícono y el texto */
+}
+
+.checkout-process .top {
+    display: flex;
+    /* Alinea el input y el botón horizontalmente */
+    margin-bottom: 10px;
+    /* Espacio debajo del grupo superior */
+}
+
+.checkout-process .top input {
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    width: 62px;
+    margin-right: 10px;
+    padding: 0 10px 0 20px;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    width: 100%;
+    background: #ff3b3c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.btn-outline {
+    width: 100%;
+    border: 1px solid #ff3b3c;
+    color: #ff3b3c;
+    font-weight: bold;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+/* ****************** */
+/* ESTILOS DEL FOOTER */
+
+footer {
+    /* Hexadecimal color code*/
+    min-height: 368px;
+    background-color: #7525a7;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .columns-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.columns-container .col ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.columns-container .col ul li {
+    padding: 5px 0;
+}
+
+.columns-container .col ul li.col-main-item {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.columns-container .col ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.copyright {
+    border-top: 1px solid #ba53fb;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/* *********************************** */
+/* MEDIA QUERY PARA OTROS DISPOSITIVOS */
+/* *********************************** */
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1rf);
+    }
+}
+
+@media (max-width: 425px) {
+    .search .logo img {
+        width: 150px;
+    }
+
+    .search .form input {
+        width: 100px;
+    }
+
+    .title-container span:first-child {
+        font-size: 40px;
+    }
+
+    .title-container span:last-child {
+        font-size: 100px;
+        line-height: 80px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
