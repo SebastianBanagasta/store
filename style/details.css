@@ -100,8 +100,7 @@ main .columns-container {
 /* ********************************** */
 .sales-block {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr;
     grid-gap: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -111,10 +110,13 @@ main .columns-container {
     text-decoration: none;
     color: initial;
 }
+.sales-block .container-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px
+}
 
 .sales-block h2 {
-    grid-row: 1;
-    grid-column: 1 / 4;
     justify-content: center;
     text-align: center;
     font-size: 40px;
@@ -237,12 +239,10 @@ main .columns-container {
 
 .product-images-block .thumbnail-container {
     grid-column: 1;
-    margin: 3px;
-
+    margin-bottom: 5px;
+    margin-right: 5px;
     max-width: 100%;
     overflow: hidden;
-    margin: 5px;
-    /* border: 1px solid #ccc; */
 }
 
 .product-images-block .thumbnail-container img {
