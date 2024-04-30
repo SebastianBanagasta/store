@@ -4,6 +4,26 @@ const params = new URLSearchParams(query)
 const id = params.get('id')
 //console.log(id)
 
+const changeMini = (e) => {
+    const selectedSrc = e.target.src
+    const bigSelector = document.getElementById("bigImg")
+    bigSelector.src = selectedSrc
+}
+
+
+
+
+const changeSubtotal = (e) => {
+    const quantity = e.target.valueAsNumber
+    const valueProduct = products.find(i => i.id === id)
+    const total = quantity * valueProduct.price
+    const productAmount = document.getElementById('amount')
+    productAmount.textContent = `S/. ${total}`
+}
+
+
+
+
 const printDetails = (id) => {
     const product = products.find( e => e.id === id )
     //console.log(product)
@@ -47,7 +67,7 @@ const printDetails = (id) => {
             <div class="product-checkout-block">
                 <div class="checkout-container">
                     <span class="checkout-total-label">Total:</span>
-                    <h2 class="checkout-total-price" id="amount">$${product.price}</h2>
+                    <h2 class="checkout-total-price" id="amount">S/. ${product.price}</h2>
                     <p class="checkout-description">
                         Incluye impuesto PAIS y percepción AFIP. Podés recuperar AR$ 50711
                         haciendo la solicitud en AFIP.
@@ -67,7 +87,7 @@ const printDetails = (id) => {
                     </ul>
                     <div class="checkout-process">
                         <div class="top">
-                            <input type="number" value="1" onkeypress="alert('hola')" id="amount" />
+                            <input type="number" value="1" onChange="changeSubtotal(event)" />
                             <button class="btn-primary">Comprar</button>
                         </div>
                         <div class="bottom">
@@ -82,17 +102,6 @@ const printDetails = (id) => {
     detailsSelector.innerHTML = detailsTemplate
 }
 
-const changeMini = (e) => {
-    const selectedSrc = e.target.src
-    const bigSelector = document.getElementById("bigImg")
-    bigSelector.src = selectedSrc
-}
 
-/*
-const changeSubtotal = (e) => {
-    const productAmount = document.getElementById('amount')
-    console.log(productAmount)
-}
-*/
 
 printDetails(id)

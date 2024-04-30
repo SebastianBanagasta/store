@@ -294,6 +294,7 @@ main .columns-container {
     /* Elimina los marcadores de lista */
     margin-bottom: 30px;
     /* Espacio debajo de la lista */
+    padding-left: 0;
 }
 
 .checkout-policy-list li {
@@ -333,6 +334,11 @@ main .columns-container {
     border: none;
     height: 40px;
     border-radius: 10px;
+    transition: 0.2s;
+}
+.btn-primary:active {
+    transform: scale(0.99);
+    background: #b70e0e;
 }
 
 .btn-outline {
@@ -342,8 +348,13 @@ main .columns-container {
     font-weight: bold;
     height: 40px;
     border-radius: 10px;
+    transition: 0.2s;
 }
-
+.btn-outline:active {
+    transform: scale(0.99);
+    background-color: #ff3b3c;
+    color: #f0f0f0;
+}
 
 /* ****************** */
 /* ESTILOS DEL FOOTER */
