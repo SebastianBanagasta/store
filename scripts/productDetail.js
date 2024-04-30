@@ -21,7 +21,18 @@ const changeSubtotal = (e) => {
     productAmount.textContent = `S/. ${total}`
 }
 
-
+//LOCAL STORAGE
+const saveProduct = (id) => {
+    const productFound = products.find(i=>i.id === id)
+    console.log(productFound)
+    const product = {
+        id: id,
+        title: productFound.title,
+        price: productFound.price,
+        image: productFound.images[0],
+        color: document.querySelector('#color-'+id).value
+    }
+}
 
 
 const printDetails = (id) => {
@@ -44,7 +55,7 @@ const printDetails = (id) => {
                 <form action="" class="selector">
                     <fieldset>
                         <label class="label" for="color">${product.color}</label>
-                        <select name="" id="" type="text" aria-placeholder="Seleccionar un color">
+                        <select name="" id="color-${product.id}" type="text" aria-placeholder="Seleccionar un color">
                             ${
                                 product.color.map(
                                     (e) => `<option value="${e}">${e}</option>`
@@ -91,7 +102,7 @@ const printDetails = (id) => {
                             <button class="btn-primary">Comprar</button>
                         </div>
                         <div class="bottom">
-                            <button class="btn-outline">Añadir al Carrito</button>
+                            <button class="btn-outline" onClick="saveProduct('${product.id}')">Añadir al Carrito</button>
                         </div>
                     </div>
                 </div>
