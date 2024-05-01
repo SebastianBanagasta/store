@@ -24,14 +24,22 @@ const changeSubtotal = (e) => {
 //LOCAL STORAGE
 const saveProduct = (id) => {
     const productFound = products.find(i=>i.id === id)
-    console.log(productFound)
     const product = {
         id: id,
         title: productFound.title,
         price: productFound.price,
         image: productFound.images[0],
-        color: document.querySelector('#color-'+id).value
+        color: document.querySelector('#color-'+id).value,
+        quantity : Number(document.querySelector('#quantity-'+id).value)
     }
+    
+    const stringifyProduct = JSON.stringify(product)
+
+    const getCard = JSON.parse(localStorage.getItem('card'))
+    if(getCard) {
+        return console.log(getCard)
+    }
+    localStorage.setItem('card',stringifyProduct)
 }
 
 
@@ -98,7 +106,7 @@ const printDetails = (id) => {
                     </ul>
                     <div class="checkout-process">
                         <div class="top">
-                            <input type="number" value="1" onChange="changeSubtotal(event)" />
+                            <input type="number" value="1" id="quantity-${product.id}" onChange="changeSubtotal(event)" />
                             <button class="btn-primary">Comprar</button>
                         </div>
                         <div class="bottom">
