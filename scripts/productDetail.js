@@ -33,13 +33,15 @@ const saveProduct = (id) => {
         quantity : Number(document.querySelector('#quantity-'+id).value)
     }
     
-    const stringifyProduct = JSON.stringify(product)
-
-    const getCard = JSON.parse(localStorage.getItem('card'))
-    if(getCard) {
-        return console.log(getCard)
+    
+    let getCard = localStorage.getItem('card')
+    if(getCard == null) {
+        const stringifyProduct = JSON.stringify([product])
+        return localStorage.setItem('card',stringifyProduct)
     }
-    localStorage.setItem('card',stringifyProduct)
+    getCard = JSON.parse(getCard)
+    getCard.push(product)
+    localStorage.setItem('card',JSON.stringify(getCard))
 }
 
 
