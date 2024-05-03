@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css..." />
+    <link rel="stylesheet" href="/style/card.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="search">
+                <div class="logo">
+                    <a class="logo" href="./index.html">
+                        <img src="../assets/tiendamia-logo.svg" width="218" alt="Logo store" />
+                    </a>
+                </div>
+                <div class="form">
+                    <input type="text" placeholder="Search" id="search" />
+                </div>
+                <div class="social">
+                    <!-- Aquí irán los íconos de redes sociales -->
+                </div>
+            </div>
+            <div class="nav">
+                <ul id="navlist">
+                    
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section id="hero">
+        <div class="container">
+            <div class="title-container">
+                <span>Tecnología</span>
+                <span>Renovada</span>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="container">
+            <div class="product-card" id="card">
+                <article id="cart-products" class="item-cart">
+                    <div class="cart-product">
+                        <img src="assets/mock1.jpg" height="150" alt="" />
+                        <div class="cart-product-detail">
+                            <span class="cart-product-title">Nombre producto</span>
+                            <span class="cart-product-color">color</span>
+                            <span class="cart-product-description">sdescripcion descripcion descripcion </span>
+                            <input type="number" value="10" class="cart-product-quantity" />
+                        </div>
+                        <div class="price">S/10000</div>
+                    </div>
+                </article>
+                <article id="total" class="item-cart">
+                    <div class="cart-resume">
+                        <span class="cart-resume-title">Resumen del pedido</span>
+                        <div class="cart-resume-total">
+                            <span class="cart-resume-total-title">Total</span>
+                            <div class="cart-resume-total-price">S/<span id="total-price">1000</span></div>
+                        </div>
+                        <span class="cart-resume-tax">Incluye impuestos y percepcion AFIP</span>
+                        <button class="cart-resume-checkout">Finaliza tu compra</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="columns-container" id="footer">
+                
+            </div>
+            <div class="copyright">Curso de HTML + CSS 2023</div>
+        </div>
+    </footer>
+    <script src="scripts/layout.js"></script>
+    <!-- <script src="scripts/productCards.js"></script> -->
+    <script src="scripts/filterProducts.js"></script>
+</body>
+
+</html>
