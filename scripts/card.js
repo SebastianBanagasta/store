@@ -1,8 +1,17 @@
-const cardproducts = JSON.parse(localStorage.getItem('card'))
-//console.log(cardproducts)
+let cardproducts = JSON.parse(localStorage.getItem('card'))
 
 const createCartCard = (totalproducts) => {
+    const articleCard = document.getElementById('cartproducts')
     let viewcardproducts = ``
+    //console.log(totalproducts)
+    if(totalproducts===null) {
+        viewcardproducts += `
+            <article class="item-cart">
+                <h1>No hay productos en el carrito 😢</h1>
+            </article>
+        `
+        return articleCard.innerHTML = viewcardproducts
+    }
     totalproducts.map((p)=>{
         viewcardproducts += `
             <article class="item-cart">
@@ -21,28 +30,36 @@ const createCartCard = (totalproducts) => {
             </article>
         ` 
     })
-    const articleCard = document.getElementById('cartproducts')
+    
     articleCard.innerHTML = viewcardproducts
 }
 
 const createTotalTemplate = (pricetotalproducts) => {
     let total = 0
+
+    if(pricetotalproducts===null) return
+
     pricetotalproducts.forEach(e => {
         total = total + e.price * e.quantity
     });
+
     const articleTotal = document.getElementById('total-price')
     //console.log(articleTotal)
     articleTotal.textContent = total
 }
 
+//ACTUALIZAR LA CANTIDAD DEL CARRITO DE COMPRAS(ACTIVIDAD 1)
 const changeQuantity = (ev) => {
-    //console.log(ev)
     const findProducts = cardproducts.find(e => e.id === ev.target.id )
     findProducts.quantity = Number(ev.target.value)
     let cardProductsSave = localStorage.getItem('card')
     cardProductsSave = JSON.parse(cardProductsSave)
-    console.log(cardProductsSave)
-
+    for (let i = 0; i < cardProductsSave.length; i++) {
+        if (cardProductsSave[i].id === findProducts.id) {
+           cardProductsSave[i] = findProducts
+        }
+    }
+    localStorage.setItem('card',JSON.stringify(cardProductsSave))
 }
 
 createCartCard(cardproducts)

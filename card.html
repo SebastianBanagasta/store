@@ -24,7 +24,10 @@
                     <input type="text" placeholder="Search" id="search" />
                 </div>
                 <div class="social">
-                    <!-- Aquí irán los íconos de redes sociales -->
+                    <div class="quantity_card">
+                        <a href="/card.html" style="font-size: 2rem;text-align: end;">🛒</a>
+                        <!-- <span class="quantity_card_number" id="quantity_card">0</span> -->
+                    </div>
                 </div>
             </div>
             <div class="nav">
@@ -54,10 +57,10 @@
                             <span class="cart-resume-title">Resumen del pedido</span>
                             <div class="cart-resume-total">
                                 <span class="cart-resume-total-title">Total</span>
-                                <div class="cart-resume-total-price">S/<span id="total-price"></span></div>
+                                <div class="cart-resume-total-price">S/ <span id="total-price">00.00</span></div>
                             </div>
                             <span class="cart-resume-tax">Incluye impuestos y percepcion AFIP</span>
-                            <button class="cart-resume-checkout">Finaliza tu compra</button>
+                            <button class="cart-resume-checkout" id="buySelector">Finaliza tu compra</button>
                         </div>
                     </article>
                 </div>
@@ -76,6 +79,7 @@
     <!-- <script src="scripts/productCards.js"></script> -->
     <script src="scripts/filterProducts.js"></script>
     <script src="scripts/card.js"></script>
+    <script src="scripts/buy.js"></script>
 </body>
 
 </html>
