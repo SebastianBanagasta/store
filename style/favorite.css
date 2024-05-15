@@ -1,0 +1,52 @@
+.product-card-favorite {
+    border: 1px solid #ccc; /* Borde delgada */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 16px; /* Espaciado interno */
+    margin-bottom: 20px; /* Margen inferior */
+
+    display: inline-block; /* Para que las tarjetas se muestren una al lado de la otra */
+    transition: box-shadow 0.3s; /* Transición suave del sombreado al pasar el ratón */
+}
+
+.product-card-favorite-favorite:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave al pasar el ratón */
+}
+
+.product-card-favorite .product-info-favorite {
+    padding: 10px 0; /* Espaciado interno en la sección de información del producto */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-card-favorite .product-title-favorite {
+    font-size: 18px; /* Tamaño de fuente del título */
+    font-weight: bold; /* Negrita */
+}
+
+.product-card-favorite .product-description {
+    color: #666; /* Color del texto de la descripción */
+}
+
+.product-card-favorite .product-price-block {
+    margin-top: 10px; /* Margen superior para el bloque de precios */
+}
+
+.product-card-favorite .price {
+    font-size: 20px; /* Tamaño de fuente del precio */
+    color: #333; /* Color del precio */
+}
+
+.product-card-favorite .discount {
+    color: #f00; /* Color del texto del descuento */
+    font-weight: bold; /* Negrita */
+}
+
+.product-card-favorite .product-img {
+    width: 100%; /* Ancho de la imagen del producto al 100% */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+.redirec-product{
+    text-decoration: none;
+    color: black;
+}

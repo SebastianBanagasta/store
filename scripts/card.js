@@ -21,11 +21,14 @@ const createCartCard = (totalproducts) => {
                         <div class="cart-product-detail">
                             <span class="cart-product-title">${p.title}</span>
                             <span class="cart-product-color">${p.color}</span>
-                            <span class="cart-product-description">descripcion descripcion descripcion </span>
+                            <span class="cart-product-description">descripcion</span>
                             <input type="number" value="${p.quantity}" min="1" id="${p.id}" onchange="changeQuantity(event)" class="cart-product-quantity" />
                         </div>
                     </div>
-                    <div class="price">S/${p.quantity * p.price}</div>
+                    <div>
+                        <div class="price">S/${p.quantity * p.price}</div>
+                        <button onClick="addFavorite(event)" id="${p.id}">Add Favorite</button>
+                    </div>
                 </div>
             </article>
         ` 
